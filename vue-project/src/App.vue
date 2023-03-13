@@ -1,67 +1,92 @@
-<script>
-import { Ref } from "vue";
-let id = 0;
-export default {
-  data() {
-    return {
-      message: "mewmew",
-      sameww: "meow",
-      count: 0,
-      text: "",
-      lyuvee: true,
-      newTodo: "",
-      todos: [
-        { id: id++, text: "Learn HTML" },
-        { id: id++, text: "Learn JavaScript" },
-        { id: id++, text: "Learn Vue" },
-      ],
-    };
-  },
-  methods: {
-    littlemew() {
-      // update component state
-      this.count++;
-    },
-    onInput(e) {
-      this.text = e.target.value;
-    },
-    toggle() {
-      this.lyuvee = !this.lyuvee;
-    },
-    addTodo() {
-      this.todos.push({ id: id++, text: this.newTodo });
-      this.newTodo = "";
-    },
-    removeTodo(todo) {
-      this.todos = this.todos.filter((t) => t !== todo);
-    },
-  },
-};
+<script setup>
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <h1 v-bind:class="sameww">{{ message }}</h1>
-  <button @click="littlemew">{{ count }}</button>
-  <button @click="toggle">
-    <h1 v-if="lyuvee">heweeoewo</h1>
-    <h1 v-else>hehiajak</h1>
-  </button>
-  <input :value="text" @input="onInput" placeholder="Type here" />
-  <p>{{ text }}</p>
-  <form @submit.prevent="addTodo">
-    <input v-model="newTodo" />
-    <button>Add Todo</button>
-  </form>
-  <ul>
-    <li v-for="todo in todos" :key="todo.id">
-      {{ todo.text }}
-      <button @click="removeTodo(todo)">X</button>
-    </li>
-  </ul>
+  <header>
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">Base</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <RouterView />
 </template>
 
 <style scoped>
-.meow {
-  color: aqua;
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
