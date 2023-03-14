@@ -1,10 +1,27 @@
-<script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+<template>
+  <div class="hewwo">
+    <h1>hello</h1>
+    <h2>{{ weewo }}</h2>
+    <ul>
+      <li v-for="cat in cats" :key="cat">{{ cat }}</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      weewo: "mewo",
+      cats: ["cat1", "mewmewo", "bbg", "kitty", "somewo"],
+    };
+  },
+};
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-    <h1>hello</h1>
-  </main>
-</template>
+<style scoped>
+.hewwo {
+  color: pink;
+  text-align: center;
+}
+</style>
