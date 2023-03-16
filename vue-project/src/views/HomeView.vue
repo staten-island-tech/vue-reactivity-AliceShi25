@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  components: {},
   data() {
     return {
       weewo: "mewo",
