@@ -4,7 +4,7 @@
     <h2 v-if="notcat">{{ weewo }}</h2>
     <h2 v-else>Yai9dosskjhksa</h2>
     <ul>
-      <li v-for="cat in cats" :key="cat">{{ cat }}</li>
+      <li v-for="item in items" :key="item.name">{{ item.name }}</li>
     </ul>
     <div class="button">
       <button v-on:click="yessir" v-if="mewozzy">Mewozaaa!</button>
@@ -18,10 +18,11 @@ export default {
   components: {},
   data() {
     return {
-      weewo: "mewo",
-      cats: ["cat1", "mewmewo", "bbg", "kitty", "somewo"],
-      notcat: true,
-      mewozzy: true,
+      items: [
+        { name: "Tyler", lastName: "Bo", osis: "2048n6125" },
+        { name: "A", lastName: "S", osis: "nnnnnnnnn" },
+        { name: "AB", lastName: "ST", osis: "nnnnwnnnn" },
+      ],
     };
   },
   methods: {
