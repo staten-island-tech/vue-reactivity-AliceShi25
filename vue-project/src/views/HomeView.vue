@@ -1,14 +1,8 @@
 <template>
   <div class="hewwo">
     <h1>hello</h1>
-    <h2 v-if="notcat">{{ weewo }}</h2>
-    <h2 v-else>Yai9dosskjhksa</h2>
-    <ul>
-      <li v-for="item in items" :key="item.name">{{ item.name }}</li>
-    </ul>
-    <div class="button">
-      <button v-on:click="yessir" v-if="mewozzy">Mewozaaa!</button>
-      <button v-on:click="yessir" v-else>wroof</button>
+    <div class="items">
+      <h2 v-for="star in stars" :key="star.name">{{ star.name }}</h2>
     </div>
   </div>
 </template>
@@ -18,28 +12,59 @@ export default {
   components: {},
   data() {
     return {
-      items: [
-        { name: "Tyler", lastName: "Bo", osis: "2048n6125" },
-        { name: "A", lastName: "S", osis: "nnnnnnnnn" },
-        { name: "AB", lastName: "ST", osis: "nnnnwnnnn" },
+      stars: [
+        { name: "Do Ha", lastName: "Bak", group: "K", height: "180", pic: "" },
+        { name: "Woong Ki", lastName: "Cha", group: "K", height: "", pic: "" },
+        { name: "Woo Jin", lastName: "Choi", group: "K", height: "", pic: "" },
+        { name: "Yu Jin", lastName: "Han", group: "K", height: "", pic: "" },
+        { name: "I Chan", lastName: "Jeong", group: "K", height: "", pic: "" },
+        { name: "Yun Seo", lastName: "Ji", group: "K", height: "", pic: "" },
+        { name: "Min Gyu", lastName: "Jung", group: "K", height: "", pic: "" },
+        { name: "Gyu Vin", lastName: "Kim", group: "K", height: "", pic: "" },
+        { name: "Ji Woong", lastName: "Kim", group: "K", height: "", pic: "" },
+        { name: "Tae Rae", lastName: "Kim", group: "K", height: "", pic: "" },
+        { name: "Jun Hyeon", lastName: "Kum", group: "K", height: "", pic: "" },
+        { name: "Da Eul", lastName: "Lee", group: "K", height: "", pic: "" },
+        { name: "Dong Gun", lastName: "Lee", group: "K", height: "", pic: "" },
+        { name: "Dong Yeol", lastName: "Lee", group: "K", height: "", pic: "" },
+        { name: "Hoe Taek", lastName: "Lee", group: "K", height: "", pic: "" },
+        { name: "Ye Dam", lastName: "Lee", group: "K", height: "", pic: "" },
+        { name: "Jun Seo", lastName: "Lim", group: "K", height: "", pic: "" },
+        { name: "Jung Hyun", lastName: "Mun", group: "K", height: "", pic: "" },
+        { name: "Sung Min", lastName: "Oh", group: "K", height: "", pic: "" },
+        { name: "Gun Wook", lastName: "Park", group: "K", height: "", pic: "" },
+        { name: "Han Bin", lastName: "Park", group: "K", height: "", pic: "" },
+        {
+          name: "Hyun Been",
+          lastName: "Park",
+          group: "K",
+          height: "",
+          pic: "",
+        },
+        { name: "Ji Hoo", lastName: "Park", group: "K", height: "", pic: "" },
       ],
     };
   },
-  methods: {
-    yessir: function () {
-      if (this.mewozzy === false) {
-        this.mewozzy = true;
-      } else {
-        this.mewozzy = false;
-      }
-    },
-  },
+  methods: {},
 };
 </script>
 
 <style scoped>
 .hewwo {
-  color: pink;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 2.5rem;
   text-align: center;
+}
+.items {
+  flex: 0 0 23.5%;
+  width: 32vw;
+  margin: 25px auto;
+  background-color: red;
+  align-content: center;
+  border: solid white;
+  border-radius: 25px;
 }
 </style>
