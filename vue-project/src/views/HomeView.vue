@@ -1,15 +1,18 @@
 <template>
   <div class="hewwo">
     <h1>hello</h1>
-    <div class="items">
-      <h2 v-for="star in stars" :key="star.name">{{ star.name }}</h2>
-    </div>
+    <div class="parent"><TheCards v-for="star in stars" :key="star" /></div>
+    <!-- <h2 v-for="star in stars" :key="star" class="items">
+        {{ star.lastName }} {{ star.name }}
+      </h2> -->
   </div>
 </template>
 
 <script>
+import TheCards from "../components/TheCards.vue";
+
 export default {
-  components: {},
+  components: { TheCards },
   data() {
     return {
       stars: [
@@ -42,6 +45,10 @@ export default {
           pic: "",
         },
         { name: "Ji Hoo", lastName: "Park", group: "K", height: "", pic: "" },
+        { name: "Won", lastName: "Seo", group: "K", height: "", pic: "" },
+        { name: "Han Bin", lastName: "Sung", group: "K", height: "", pic: "" },
+        { name: "Seung Eon", lastName: "Yoo", group: "K", height: "", pic: "" },
+        { name: "Jong", lastName: "Yoon", group: "K", height: "", pic: "" },
       ],
     };
   },
@@ -57,14 +64,5 @@ export default {
   flex-direction: row;
   padding: 2.5rem;
   text-align: center;
-}
-.items {
-  flex: 0 0 23.5%;
-  width: 32vw;
-  margin: 25px auto;
-  background-color: red;
-  align-content: center;
-  border: solid white;
-  border-radius: 25px;
 }
 </style>
