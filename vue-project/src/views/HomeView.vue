@@ -1,7 +1,13 @@
 <template>
   <div class="parent">
     <div>
-      <TheCards v-for="star in stars" :key="star.name" :name="star.name" />
+      <TheCards
+        v-for="star in stars"
+        :key="star.name"
+        :name="star.name"
+        :lastname="star.lastName"
+        :image="star.pic"
+      />
     </div>
   </div>
 </template>
@@ -16,7 +22,12 @@ export default {
     return {
       selected: "",
       stars: [
-        { name: "Do Ha", lastName: "Bak", group: "K", pic: "" },
+        {
+          name: "Do Ha",
+          lastName: "Bak",
+          group: "K",
+          pic: "https://kprofiles.com/wp-content/uploads/2023/01/bak-doha-640x800.jpg",
+        },
         { name: "Woong Ki", lastName: "Cha", group: "K", pic: "" },
         { name: "Woo Jin", lastName: "Choi", group: "K", pic: "" },
         { name: "Yu Jin", lastName: "Han", group: "K", pic: "" },
@@ -44,10 +55,10 @@ export default {
           pic: "",
         },
 
-        { name: "Ji Hoo", lastName: "Park", group: "K", height: "", pic: "" },
-        { name: "Won", lastName: "Seo", group: "K", height: "", pic: "" },
-        { name: "Han Bin", lastName: "Sung", group: "K", height: "", pic: "" },
-        { name: "Seung Eon", lastName: "Yoo", group: "K", height: "", pic: "" },
+        { name: "Ji Hoo", lastName: "Park", group: "K", pic: "" },
+        { name: "Won", lastName: "Seo", group: "K", pic: "" },
+        { name: "Han Bin", lastName: "Sung", group: "K", pic: "" },
+        { name: "Seung Eon", lastName: "Yoo", group: "K", pic: "" },
       ],
     };
   },
@@ -56,7 +67,7 @@ export default {
 </script>
 
 <style scoped>
-html,
+/* html,
 body,
 * {
   margin: 0;
@@ -71,5 +82,5 @@ body,
   flex-direction: row;
   padding: 2.5rem;
   text-align: center;
-}
+} */
 </style>
