@@ -1,16 +1,36 @@
 <template>
-  <div class="cards"></div>
+  <div class="cards">
+    <h2>{{ lastname }} {{ name }}</h2>
+    <img src="image" alt="" />
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Card",
+  props: {
+    lastname: String,
+    name: String,
+    image: String,
+  },
+};
 </script>
 
 <style scoped>
-.cards {
+/* .cards {
   flex: 0 0 23.5%;
   width: 32vw;
   margin-bottom: 10rem;
+  background-color: pink;
+  align-content: center;
+  border: solid white;
+  border-radius: 25px;
+} */
+
+.cards {
+  flex: 0 0 23.5%;
+  width: 32vw;
+  margin: 25px auto;
   background-color: red;
   align-content: center;
   border: solid white;
