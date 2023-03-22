@@ -2,7 +2,7 @@
   <div class="stuffs">
     <div class="stuff">
       <h2>{{ lastname }} {{ name }}</h2>
-      <img :src="image" alt="" />
+      <img :src="image" alt="" class="img" />
     </div>
   </div>
 </template>

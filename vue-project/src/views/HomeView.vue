@@ -27,7 +27,7 @@ export default {
           name: "Do Ha",
           lastName: "Bak",
           group: "K",
-          img: "https://kprofiles.com/wp-content/uploads/2023/01/bak-doha-640x800.jpg",
+          img: "",
         },
         { name: "Woong Ki", lastName: "Cha", group: "K", img: "" },
         { name: "Woo Jin", lastName: "Choi", group: "K", img: "" },
@@ -80,14 +80,14 @@ export default {
 
 .parent {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
   padding: 2.5rem;
   text-align: center;
 }
 
-img {
-  width: 100%;
+.img {
+  width: 2px;
 }
 </style>
