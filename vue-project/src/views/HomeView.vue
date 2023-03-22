@@ -6,7 +6,8 @@
         :key="star.name"
         :name="star.name"
         :lastname="star.lastName"
-        :image="star.pic"
+        :image="star.img"
+        class="cards"
       />
     </div>
   </div>
@@ -26,39 +27,39 @@ export default {
           name: "Do Ha",
           lastName: "Bak",
           group: "K",
-          pic: "https://kprofiles.com/wp-content/uploads/2023/01/bak-doha-640x800.jpg",
+          img: "https://kprofiles.com/wp-content/uploads/2023/01/bak-doha-640x800.jpg",
         },
-        { name: "Woong Ki", lastName: "Cha", group: "K", pic: "" },
-        { name: "Woo Jin", lastName: "Choi", group: "K", pic: "" },
-        { name: "Yu Jin", lastName: "Han", group: "K", pic: "" },
-        { name: "I Chan", lastName: "Jeong", group: "K", pic: "" },
-        { name: "Yun Seo", lastName: "Ji", group: "K", pic: "" },
-        { name: "Min Gyu", lastName: "Jung", group: "K", pic: "" },
-        { name: "Gyu Vin", lastName: "Kim", group: "K", pic: "" },
-        { name: "Ji Woong", lastName: "Kim", group: "K", pic: "" },
-        { name: "Tae Rae", lastName: "Kim", group: "K", pic: "" },
-        { name: "Jun Hyeon", lastName: "Kum", group: "K", pic: "" },
-        { name: "Da Eul", lastName: "Lee", group: "K", pic: "" },
-        { name: "Dong Gun", lastName: "Lee", group: "K", pic: "" },
-        { name: "Dong Yeol", lastName: "Lee", group: "K", pic: "" },
-        { name: "Hoe Taek", lastName: "Lee", group: "K", pic: "" },
-        { name: "Ye Dam", lastName: "Lee", group: "K", pic: "" },
-        { name: "Jun Seo", lastName: "Lim", group: "K", pic: "" },
-        { name: "Jung Hyun", lastName: "Mun", group: "K", pic: "" },
-        { name: "Sung Min", lastName: "Oh", group: "K", pic: "" },
-        { name: "Gun Wook", lastName: "Park", group: "K", pic: "" },
-        { name: "Han Bin", lastName: "Park", group: "K", pic: "" },
+        { name: "Woong Ki", lastName: "Cha", group: "K", img: "" },
+        { name: "Woo Jin", lastName: "Choi", group: "K", img: "" },
+        { name: "Yu Jin", lastName: "Han", group: "K", img: "" },
+        { name: "I Chan", lastName: "Jeong", group: "K", img: "" },
+        { name: "Yun Seo", lastName: "Ji", group: "K", img: "" },
+        { name: "Min Gyu", lastName: "Jung", group: "K", img: "" },
+        { name: "Gyu Vin", lastName: "Kim", group: "K", img: "" },
+        { name: "Ji Woong", lastName: "Kim", group: "K", img: "" },
+        { name: "Tae Rae", lastName: "Kim", group: "K", img: "" },
+        { name: "Jun Hyeon", lastName: "Kum", group: "K", img: "" },
+        { name: "Da Eul", lastName: "Lee", group: "K", img: "" },
+        { name: "Dong Gun", lastName: "Lee", group: "K", img: "" },
+        { name: "Dong Yeol", lastName: "Lee", group: "K", img: "" },
+        { name: "Hoe Taek", lastName: "Lee", group: "K", img: "" },
+        { name: "Ye Dam", lastName: "Lee", group: "K", img: "" },
+        { name: "Jun Seo", lastName: "Lim", group: "K", img: "" },
+        { name: "Jung Hyun", lastName: "Mun", group: "K", img: "" },
+        { name: "Sung Min", lastName: "Oh", group: "K", img: "" },
+        { name: "Gun Wook", lastName: "Park", group: "K", img: "" },
+        { name: "Han Bin", lastName: "Park", group: "K", img: "" },
         {
           name: "Hyun Been",
           lastName: "Park",
           group: "K",
-          pic: "",
+          img: "",
         },
 
-        { name: "Ji Hoo", lastName: "Park", group: "K", pic: "" },
-        { name: "Won", lastName: "Seo", group: "K", pic: "" },
-        { name: "Han Bin", lastName: "Sung", group: "K", pic: "" },
-        { name: "Seung Eon", lastName: "Yoo", group: "K", pic: "" },
+        { name: "Ji Hoo", lastName: "Park", group: "K", img: "" },
+        { name: "Won", lastName: "Seo", group: "K", img: "" },
+        { name: "Han Bin", lastName: "Sung", group: "K", img: "" },
+        { name: "Seung Eon", lastName: "Yoo", group: "K", img: "" },
       ],
     };
   },
@@ -67,20 +68,26 @@ export default {
 </script>
 
 <style scoped>
-/* html,
-body,
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
+.cards {
+  flex: 0 0 23.5%;
+  width: 32vw;
+  margin: 25px auto;
+  background-color: red;
+  align-content: center;
+  border: solid white;
+  border-radius: 25px;
 }
+
 .parent {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   flex-direction: row;
   padding: 2.5rem;
   text-align: center;
-} */
+}
+
+img {
+  width: 100%;
+}
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <div class="card">
-    <div class="cards">
+  <div class="stuffs">
+    <div class="stuff">
       <h2>{{ lastname }} {{ name }}</h2>
-      <img src="" alt="" />
+      <img :src="image" alt="" />
     </div>
   </div>
 </template>
@@ -28,23 +28,4 @@ export default {
   border: solid white;
   border-radius: 25px;
 } */
-
-.cards {
-  flex: 0 0 23.5%;
-  width: 32vw;
-  margin: 25px auto;
-  background-color: red;
-  align-content: center;
-  border: solid white;
-  border-radius: 25px;
-}
-
-.card {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 2.5rem;
-  text-align: center;
-}
 </style>
