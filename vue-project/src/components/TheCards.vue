@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <img :src="image" alt="" class="img" />
-    <h2>{{ lastname }} {{ name }} ({{ group }})</h2>
+    <h3>{{ lastname }} {{ name }} ({{ group }})</h3>
     <button>Invest!!!</button>
   </div>
 </template>
@@ -22,12 +22,12 @@ export default {
 .cards {
   width: 300px;
   margin: 1rem;
-  border-radius: 3px;
-  box-shadow: 0.2px 4px 5px black;
-  background-color: lightgray;
+  color: white;
 }
 
 .img {
   width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0.2px 4px 5px grey;
 }
 </style>

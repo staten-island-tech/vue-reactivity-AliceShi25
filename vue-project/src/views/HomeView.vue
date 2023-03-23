@@ -1,25 +1,31 @@
 <template>
   <div class="main">
-    <h1>Invest in Stars</h1>
+    <h2>Invest in Stars</h2>
     <div class="parent">
-      <TheCards
-        v-for="star in stars"
-        :key="star.name"
-        :name="star.name"
-        :lastname="star.lastName"
-        :image="star.img"
-        :group="star.group"
-      />
+      <div class="cart">
+        <TheCart />
+      </div>
+      <div class="bros">
+        <TheCards
+          v-for="star in stars"
+          :key="star.name"
+          :name="star.name"
+          :lastname="star.lastName"
+          :image="star.img"
+          :group="star.group"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import TheCards from "../components/TheCards.vue";
+import TheCart from "../components/TheCart.vue";
 
 export default {
   name: "ProductsList",
-  components: { TheCards },
+  components: { TheCards, TheCart },
   data() {
     return {
       selected: "",
@@ -457,12 +463,6 @@ export default {
           img: "https://img.kpopjuice.com/member/c78299a5f0623e178bdd1160e5165152_m.webp",
         },
         {
-          name: "Ji Hoo",
-          lastName: "Park",
-          group: "K",
-          img: "https://img.kpopjuice.com/member/c78299a5f0623e178bdd1160e5165152_m.webp",
-        },
-        {
           name: "Min Seok",
           lastName: "Park",
           group: "K",
@@ -608,13 +608,14 @@ export default {
 </script>
 
 <style scoped>
-.parent {
+.bros {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
   padding: 2.5rem;
   text-align: center;
+  background-color: #1b1545;
 }
 .main {
   text-align: center;
