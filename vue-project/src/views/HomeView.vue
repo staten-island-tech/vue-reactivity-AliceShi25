@@ -1,20 +1,18 @@
 <template>
   <div class="main">
     <h2>Invest in Stars</h2>
-    <div class="parent">
+    <div class="bros">
       <div class="cart">
         <TheCart />
       </div>
-      <div class="bros">
-        <TheCards
-          v-for="star in stars"
-          :key="star.name"
-          :name="star.name"
-          :lastname="star.lastName"
-          :image="star.img"
-          :group="star.group"
-        />
-      </div>
+      <TheCards
+        v-for="star in stars"
+        :key="star.name"
+        :name="star.name"
+        :lastname="star.lastName"
+        :image="star.img"
+        :group="star.group"
+      />
     </div>
   </div>
 </template>
@@ -608,6 +606,10 @@ export default {
 </script>
 
 <style scoped>
+.cart {
+  display: flex;
+  flex-direction: row;
+}
 .bros {
   display: flex;
   justify-content: space-between;
