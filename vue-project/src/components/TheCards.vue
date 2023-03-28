@@ -2,12 +2,15 @@
   <div class="cards">
     <img :src="image" alt="" class="img" />
     <h3>{{ lastname }} {{ name }} ({{ group }})</h3>
-    <button>Invest!!!</button>
+    <button>HELP</button>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {};
+  },
   name: "Card",
   props: {
     lastname: String,
@@ -15,6 +18,7 @@ export default {
     image: String,
     group: String,
   },
+  methods: {},
 };
 </script>
 
