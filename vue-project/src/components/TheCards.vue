@@ -2,14 +2,16 @@
   <div class="cards">
     <img :src="image" alt="" class="img" />
     <h3>{{ lastname }} {{ name }} ({{ group }})</h3>
-    <button>HELP</button>
+    <button v-on:click="push()">HELP</button>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      cart: [],
+    };
   },
   name: "Card",
   props: {
@@ -18,7 +20,11 @@ export default {
     image: String,
     group: String,
   },
-  methods: {},
+  methods: {
+    push() {
+      this.stars.push({ lastname: this.cart.lastname, name: this.cart.name });
+    },
+  },
 };
 </script>
 
