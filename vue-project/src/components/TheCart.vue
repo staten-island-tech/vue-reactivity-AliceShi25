@@ -6,7 +6,13 @@
 </template>
 
 <script>
-export default {};
+import TheCards from "./TheCards.vue";
+export default {
+  components: { TheCards },
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style scoped>

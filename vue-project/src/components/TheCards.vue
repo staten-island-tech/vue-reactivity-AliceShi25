@@ -7,10 +7,11 @@
 </template>
 
 <script>
+import { invest } from "./invest.js";
 export default {
   data() {
     return {
-      cart: [],
+      invest,
     };
   },
   name: "Card",
@@ -22,7 +23,7 @@ export default {
   },
   methods: {
     push() {
-      this.stars.push({ lastname: this.cart.lastname, name: this.cart.name });
+      this.invest.cart.push({ lastname: this.lastname, name: this.name });
     },
   },
 };
@@ -30,8 +31,8 @@ export default {
 
 <style scoped>
 .cards {
-  width: 300px;
-  margin: 1rem;
+  width: 20rem;
+  margin: 0.5rem;
   color: white;
 }
 
