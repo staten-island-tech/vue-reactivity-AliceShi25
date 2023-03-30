@@ -2,28 +2,30 @@
   <div class="cards">
     <img :src="image" alt="" class="img" />
     <h3>{{ lastname }} {{ name }} ({{ group }})</h3>
-    <button v-on:click="push()">HELP</button>
+    <button @click="push()">Invest!!!</button>
   </div>
 </template>
 
 <script>
-import { invest } from "./invest.js";
+import { store } from "./store";
+// import TheButton from "../components/TheButton.vue";
 export default {
-  data() {
-    return {
-      invest,
-    };
-  },
   name: "Card",
+  components: {},
   props: {
     lastname: String,
     name: String,
     image: String,
     group: String,
   },
+  data() {
+    return {
+      store,
+    };
+  },
   methods: {
     push() {
-      this.invest.cart.push({ lastname: this.lastname, name: this.name });
+      store.cart.push({ lastname: this.lastname, name: this.name });
     },
   },
 };

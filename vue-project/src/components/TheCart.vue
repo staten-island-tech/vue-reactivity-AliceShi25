@@ -1,16 +1,21 @@
 <template>
   <div class="YourCart">
-    <h2>Your Investments</h2>
-    <h3>sob</h3>
+    <h3>{{ lastname }} {{ name }}</h3>
+    <button>Annul Investment</button>
   </div>
 </template>
 
 <script>
-import TheCards from "./TheCards.vue";
+import { store } from "./store";
 export default {
-  components: { TheCards },
+  name: "Cart",
   data() {
-    return {};
+    return { store };
+  },
+  props: {
+    lastname: String,
+    name: String,
+    image: String,
   },
 };
 </script>

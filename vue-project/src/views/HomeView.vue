@@ -1,8 +1,15 @@
 <template>
   <div class="main">
-    <h2>Invest in Stars</h2>
+    <h1>Invest in Stars</h1>
+    <h2>Your Investments</h2>
     <div class="cart">
-      <TheCart />
+      <TheCart
+        v-for="star in store.cart"
+        :key="star.name"
+        :name="star.name"
+        :lastname="star.lastname"
+        :image="star.img"
+      />
     </div>
     <div class="bros">
       <TheCards
@@ -20,6 +27,7 @@
 <script>
 import TheCards from "../components/TheCards.vue";
 import TheCart from "../components/TheCart.vue";
+import { store } from "../components/store";
 
 export default {
   name: "ProductsList",
@@ -599,6 +607,7 @@ export default {
           img: "https://img.kpopjuice.com/member/6fad94a98c3d3a5f83f6d5f7e4cc0d22_m.webp",
         },
       ],
+      store,
     };
   },
   methods: {},
