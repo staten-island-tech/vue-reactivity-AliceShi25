@@ -1,25 +1,27 @@
 <template>
-  <div class="main">
+  <div class="parent">
     <h1>Invest in Stars</h1>
-    <h2>Your Investments</h2>
-    <div class="cart">
-      <TheCart
-        v-for="star in store.cart"
-        :key="star.name"
-        :name="star.name"
-        :lastname="star.lastname"
-        :image="star.img"
-      />
-    </div>
-    <div class="bros">
-      <TheCards
-        v-for="star in stars"
-        :key="star.name"
-        :name="star.name"
-        :lastname="star.lastname"
-        :image="star.img"
-        :group="star.group"
-      />
+    <div class="main">
+      <div class="flex-child cart">
+        <h2>Your Investments</h2>
+        <TheCart
+          v-for="star in store.cart"
+          :key="star.name"
+          :name="star.name"
+          :lastname="star.lastname"
+          :img="star.img"
+        />
+      </div>
+      <div class="flex-child bros">
+        <TheCards
+          v-for="star in stars"
+          :key="star.name"
+          :name="star.name"
+          :lastname="star.lastname"
+          :img="star.img"
+          :group="star.group"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -615,9 +617,12 @@ export default {
 </script>
 
 <style scoped>
-.cart {
+.main {
   display: flex;
-  flex-direction: row;
+}
+.cart {
+  background-color: #1b1545;
+  color: white;
 }
 .bros {
   display: flex;
@@ -628,7 +633,7 @@ export default {
   text-align: center;
   background-color: #1b1545;
 }
-.main {
+.parent {
   text-align: center;
 }
 </style>

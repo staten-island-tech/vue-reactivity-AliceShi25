@@ -1,7 +1,8 @@
 <template>
   <div class="YourCart">
+    <img :src="img" alt="" class="img2" />
     <h3>{{ lastname }} {{ name }}</h3>
-    <button>Annul Investment</button>
+    <button @click="remove(cart)">Annul Investment</button>
   </div>
 </template>
 
@@ -15,15 +16,21 @@ export default {
   props: {
     lastname: String,
     name: String,
-    image: String,
+    img: String,
+  },
+  methods: {
+    remove(cart) {},
   },
 };
 </script>
 
 <style scoped>
 .YourCart {
-  color: black;
-  background-color: white;
-  width: 10%;
+  margin: 0.5rem;
+}
+
+.img2 {
+  width: 50%;
+  border-radius: 1.5rem;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <img :src="image" alt="" class="img" />
+    <img :src="img" alt="" class="img" />
     <h3>{{ lastname }} {{ name }} ({{ group }})</h3>
     <button @click="push()">Invest!!!</button>
   </div>
@@ -15,7 +15,7 @@ export default {
   props: {
     lastname: String,
     name: String,
-    image: String,
+    img: String,
     group: String,
   },
   data() {
@@ -25,7 +25,11 @@ export default {
   },
   methods: {
     push() {
-      store.cart.push({ lastname: this.lastname, name: this.name });
+      store.cart.push({
+        lastname: this.lastname,
+        name: this.name,
+        img: this.img,
+      });
     },
   },
 };
@@ -33,7 +37,7 @@ export default {
 
 <style scoped>
 .cards {
-  width: 20rem;
+  width: 15rem;
   margin: 0.5rem;
   color: white;
 }
