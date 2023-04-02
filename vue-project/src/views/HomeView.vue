@@ -4,7 +4,7 @@
     <div class="main">
       <div class="flex-child cart">
         <h2>Your Investments</h2>
-        <h3>Total: {{ store.total }}</h3>
+        <!-- <h3>Total: {{ store.total }}</h3> -->
         <button @click="remove(store.cart.id)" class="btn">
           Clear Investments
         </button>
