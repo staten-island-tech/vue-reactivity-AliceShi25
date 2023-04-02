@@ -17,6 +17,7 @@ export default {
     name: String,
     img: String,
     group: String,
+    price: Number,
   },
   data() {
     return {
@@ -30,6 +31,7 @@ export default {
         name: this.name,
         img: this.img,
       });
+      store.total += this.price;
     },
   },
 };

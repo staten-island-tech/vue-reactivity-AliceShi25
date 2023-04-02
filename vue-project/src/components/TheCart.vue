@@ -17,6 +17,7 @@ export default {
     lastname: String,
     name: String,
     img: String,
+    price: Number,
   },
   methods: {
     // remove(id) {

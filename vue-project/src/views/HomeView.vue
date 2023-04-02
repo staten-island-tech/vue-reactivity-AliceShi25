@@ -4,7 +4,7 @@
     <div class="main">
       <div class="flex-child cart">
         <h2>Your Investments</h2>
-        <!-- <h3>Total: {{ store.total }}</h3> -->
+        <h3>Total: {{ store.total }} Stars</h3>
         <button @click="remove(store.cart.id)" class="btn">
           Clear Investments
         </button>
@@ -14,6 +14,7 @@
           :name="star.name"
           :lastname="star.lastname"
           :img="star.img"
+          :price="star.price"
         />
       </div>
       <div class="flex-child bros">
@@ -24,6 +25,7 @@
           :lastname="star.lastname"
           :img="star.img"
           :group="star.group"
+          :price="star.price"
         />
       </div>
     </div>
@@ -715,6 +717,7 @@ export default {
   methods: {
     remove(id) {
       this.store.cart = this.store.cart.filter((t) => t.id !== id);
+      store.total = 0;
       console.log(id);
     },
   },
