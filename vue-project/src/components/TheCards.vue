@@ -2,7 +2,7 @@
   <div class="cards">
     <img :src="img" alt="" class="img" />
     <h3>{{ lastname }} {{ name }} ({{ group }})</h3>
-    <button @click="push()">Invest!!!</button>
+    <button @click="push()" class="btn">Invest!!!</button>
   </div>
 </template>
 
@@ -40,6 +40,27 @@ export default {
   width: 15rem;
   margin: 0.5rem;
   color: white;
+}
+
+.btn {
+  font-family: "Alkatra", cursive;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+  background-color: #1b1545;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 5rem;
+  width: 15vw;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btn:hover {
+  box-shadow: 0 1.5px 5px pink;
+  color: grey;
+  background-color: #f4fdff;
+  border: solid pink;
 }
 
 .img {

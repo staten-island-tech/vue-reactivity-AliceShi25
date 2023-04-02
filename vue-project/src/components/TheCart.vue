@@ -2,7 +2,7 @@
   <div class="YourCart">
     <img :src="img" alt="" class="img2" />
     <h3>{{ lastname }} {{ name }}</h3>
-    <button @click="remove(store.cart.id)">Annul Investment</button>
+    <!-- <button @click="remove(store.cart.id)">Annul Investment</button> -->
   </div>
 </template>
 
@@ -19,10 +19,10 @@ export default {
     img: String,
   },
   methods: {
-    remove(id) {
-      this.store.cart = this.store.cart.filter((t) => t.id !== id);
-      console.log(id);
-    },
+    // remove(id) {
+    //   this.store.cart = this.store.cart.filter((t) => t.id !== id);
+    //   console.log(id);
+    // },
   },
 };
 </script>
