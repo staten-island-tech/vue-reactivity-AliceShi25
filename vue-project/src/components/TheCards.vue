@@ -53,7 +53,7 @@ export default {
   font-size: 1rem;
   text-align: center;
   border-radius: 5rem;
-  width: 15vw;
+  width: 10vw;
   transition: all 0.3s;
   position: relative;
 }
